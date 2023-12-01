@@ -1,3 +1,5 @@
 from django.contrib import admin
+from models import TutorShift
 
-# Register your models here.
+class TutorAdmin(admin.ModelAdmin):
+    list_display = ['day', 'start_time', 'end_time', 'notes']
