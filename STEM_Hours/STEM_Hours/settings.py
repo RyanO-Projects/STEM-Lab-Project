@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< Updated upstream:STEM_Hours/STEM_Hours/settings.py
     'StemLab',
+=======
+    'hours_calendar',
+    'homepage',
+    'accounts',
+>>>>>>> Stashed changes:StemLab/settings.py
 ]
 
 MIDDLEWARE = [
@@ -81,6 +87,8 @@ DATABASES = {
     }
 }
 
+# Defined default user profile(s)
+AUTH_USER_MODEL = 'accounts.StudentUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

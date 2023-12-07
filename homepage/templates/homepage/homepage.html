@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <p>Home Page</p>
+        <a href="{% url 'accounts:login'%}">Sign in</a><br>
+        <a href="{% url 'accounts:logout'%}">Sign out</a><br>
+    </body>
+</html>
+
+{% include 'hours_calendar/calendar.html' %}
+
