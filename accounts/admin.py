@@ -1,10 +1,8 @@
 from django.contrib import admin
-from accounts.models import StudentUser, LoginLogoutRecord
-admin.site.register(StudentUser)
+from accounts.models import User
 
 # Register your models here.
-if not admin.site.is_registered(StudentUser):
-    admin.site.register(StudentUser)
-    
-if admin.site.is_registered(LoginLogoutRecord):
-    admin.site.register(LoginLogoutRecord)
+
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('email', 'username', 'password')
