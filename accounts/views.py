@@ -1,8 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.contrib.auth import login, authenticate, logout
 from . import forms
 
 
+def user_logout(request):
+    logout(request)
+    return render(request, "logout/sign_out.html")
 
 #####
 def login_page(request):
@@ -21,8 +24,3 @@ def login_page(request):
             else:
                 message = "Login failed."
     return render(request, 'login/sign_in.html', context={'form' : form, "message" : message})
-
-
-def user_logout(request):
-    logout(request)
-    return redirect('login/sign_in.html')
