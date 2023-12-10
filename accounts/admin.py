@@ -1,8 +1,10 @@
 from django.contrib import admin
-from accounts.models import User
+from accounts.models import User, LoginLogoutRecord
 
 # Register your models here.
 
-@admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    list_display = ('email', 'username', 'password')
+if not admin.site.is_registered(User):
+    admin.site.register(User)
+    
+if admin.site.is_registered(LoginLogoutRecord):
+    admin.site.register(LoginLogoutRecord)
