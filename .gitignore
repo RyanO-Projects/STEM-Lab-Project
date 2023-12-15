@@ -19,6 +19,8 @@ db.sqlite3
 *.log
 *.pot
 *.pyc
+._*
+.DS_Store
 __pycache__/
 local_settings.py
 db.sqlite3
