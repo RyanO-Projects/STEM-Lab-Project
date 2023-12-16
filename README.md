@@ -2,25 +2,19 @@
 
 ## Installation:
 
-    1. Clone repository or download files through Github
+1. Clone repository or download files through Github
 
-    2. Open terminal, make sure you are in the proper directory, and make migrations:
+2. Open terminal, make sure you are in the proper directory, and make migrations:
 
-        '''
-            python manage.py makemigrations
-            python manage.py migrate
-        '''
+                python manage.py makemigrations
+                python manage.py migrate
 
-            or
+    or
 
-        '''
-            python3 manage.py makemigrations
-            python3 manage.py migrate
-        '''
+                python3 manage.py makemigrations
+                python3 manage.py migrate
 
-            or 
+    or 
 
-        '''
-            py manage.py makemigrations
-            py manage.py migrate
-        '''
+                py manage.py makemigrations
+                py manage.py migrate
