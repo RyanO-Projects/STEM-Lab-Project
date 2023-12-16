@@ -5,10 +5,10 @@ from accounts.models import LoginLogoutRecord
 from . import forms
 
 def user_login(request):
-    form = forms.LoginForm()
+    form = forms.LoginLogoutForm()
     message = ""
     if request.method == "POST":
-        form = forms.LoginForm(request.POST)
+        form = forms.LoginLogoutForm(request.POST)
         if form.is_valid():
             first = form.cleaned_data["first_name"]
             last = form.cleaned_data["last_name"]
@@ -16,13 +16,13 @@ def user_login(request):
             student.last_login_time = timezone.now()
             student.save()
             return redirect("homepage:homepage")
-    return render(request, "login/sign_in.html", context={"form" : form, "message" : message})
+    return render(request, "sign_in.html", context={"form" : form, "message" : message})
 
 def user_logout(request):
-    form = forms.LogoutForm()
+    form = forms.LoginLogoutForm()
     message = ""
     if request.method == "POST":
-        form = forms.LogoutForm(request.POST)
+        form = forms.LoginLogoutForm(request.POST)
         if form.is_valid():
             first = form.cleaned_data["first_name"]
             last = form.cleaned_data["last_name"]
@@ -31,4 +31,4 @@ def user_logout(request):
             student.total_time += (student.last_logout_time - student.last_login_time).seconds
             student.save()
             return redirect("homepage:homepage")
-    return render(request, "logout/sign_out.html", context={"form" : form, "message" : message})
+    return render(request, "sign_out.html", context={"form" : form, "message" : message})

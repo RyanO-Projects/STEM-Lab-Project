@@ -7,8 +7,7 @@ This is a project for hosting a website for the Casper College STEM Learning Cen
 
 ## Features:
 
-- Sign in/ Sign out functionality
-
+- Sign in/ Sign out functionality, record student times etc
 - A timetable that displays tutoring availability.
 - A BEAUTIFUL homepage that combines these functions into one place
 
@@ -80,4 +79,4 @@ Although Alexandre's tutorial did not end up in the final product, it was very h
 
 ## Bug List
 
-- It's not done yet.
+- No known bugs
