@@ -27,6 +27,10 @@ This is a project for hosting a website for the Casper College STEM Learning Cen
 
                 py --version
 
+    In addition, some may need to use "python3" instead of "python" when entering commands, like so:
+
+                python3 --version
+
 2. Clone repository or download files through Github
 
 3. Make sure that requirements are met
@@ -37,11 +41,11 @@ This is a project for hosting a website for the Casper College STEM Learning Cen
 
                 python -m pip install --upgrade pip
 
-    and install required addons
+    Make sure you are in the proper directory, and install required addons
     
                 pip install -r requirements.txt
 
-4. Make sure you are in the proper directory, and make migrations:
+4. Make migrations
 
     In your terminal:
 
@@ -56,7 +60,7 @@ This is a project for hosting a website for the Casper College STEM Learning Cen
 
 6. Visit the website
 
-    Visit [this link](http://127.0.0.1:8000/) to see it
+    After the server is running, visit [this link](http://127.0.0.1:8000/) to see it in action
 
 ## Bug List
 
