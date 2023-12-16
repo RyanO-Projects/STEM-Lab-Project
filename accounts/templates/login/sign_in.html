@@ -5,5 +5,6 @@
         {{ form.as_p }}
         {% csrf_token %}
         <button type="submit">Submit</button>
+        <p>Click <a href="{% url 'timetable:timesheet'%}">here</a> to return to the homepage.</p>
     </form>
 {% endblock content %}
