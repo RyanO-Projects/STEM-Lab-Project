@@ -23,7 +23,7 @@ This is a project for hosting a website for the Casper College STEM Learning Cen
     If you are on Windows and have installed Python but it is still not working, make sure that Python has been added to Windows PATH.
     [Here is a useful tutorial for adding Python to your PATH](https://www.geeksforgeeks.org/how-to-add-python-to-windows-path/)
 
-    If it is still not working, use "py" instead of "python" when entering commands into your tutorial, like so:
+    If it is still not working, use "py" instead of "python" when entering commands into your terminal, like so:
 
                 py --version
 
