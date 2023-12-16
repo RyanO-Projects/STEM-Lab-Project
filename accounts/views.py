@@ -4,35 +4,31 @@ from django.utils import timezone
 from accounts.models import LoginLogoutRecord
 from . import forms
 
-
 def user_login(request):
     form = forms.LoginForm()
     message = ""
     if request.method == "POST":
         form = forms.LoginForm(request.POST)
         if form.is_valid():
-            user = authenticate(
-                username = form.cleaned_data["username"],
-                password = form.cleaned_data["password"]
-                )
-            if user is not None:
-                login(request, user)
-                LoginLogoutRecord.objects.create(student=user, login_time=timezone.now())
-                return redirect("homepage:homepage")
-            else:
-                message = "Login Failed."
+            first = form.cleaned_data["first_name"]
+            last = form.cleaned_data["last_name"]
+            student = LoginLogoutRecord.objects.get_or_create(first_name = first, last_name = last)[0]
+            student.last_login_time = timezone.now()
+            student.save()
+            return redirect("homepage:homepage")
     return render(request, "login/sign_in.html", context={"form" : form, "message" : message})
 
-
 def user_logout(request):
-    if request.user.is_authenticated:
-        logout_time = timezone.now()
-        logout_record = LoginLogoutRecord.objects.filter(student=request.user, logout_time__isnull=True).first()
-        if logout_record:
-            logout_record.logout_time = logout_time
-            logout_record.save()
-        logout(request)
-    else:
-        return render(request, "logout/error.html")
-
-    return render(request, "logout/sign_out.html")
+    form = forms.LogoutForm()
+    message = ""
+    if request.method == "POST":
+        form = forms.LogoutForm(request.POST)
+        if form.is_valid():
+            first = form.cleaned_data["first_name"]
+            last = form.cleaned_data["last_name"]
+            student = LoginLogoutRecord.objects.get_or_create(first_name = first, last_name = last)[0]
+            student.last_logout_time = timezone.now()
+            student.total_time += (student.last_logout_time - student.last_login_time).seconds
+            student.save()
+            return redirect("homepage:homepage")
+    return render(request, "logout/sign_out.html", context={"form" : form, "message" : message})

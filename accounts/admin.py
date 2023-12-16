@@ -6,5 +6,5 @@ from accounts.models import User, LoginLogoutRecord
 if not admin.site.is_registered(User):
     admin.site.register(User)
     
-if admin.site.is_registered(LoginLogoutRecord):
+if not admin.site.is_registered(LoginLogoutRecord):
     admin.site.register(LoginLogoutRecord)
