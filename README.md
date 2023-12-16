@@ -1,5 +1,7 @@
 # COSC-2418 Final Project
 
+## About:
+
 ## Installation:
 
 1. Clone repository or download files through Github
@@ -18,3 +20,19 @@
 
                 py manage.py makemigrations
                 py manage.py migrate
+
+3. Run server
+
+                python manage.py runserver
+
+    or
+
+                python3 manage.py runserver
+
+    or
+
+                py manage.py runserver
+
+4. Open the website
+
+    Visit [this link](http://127.0.0.1:8000/) to see it
