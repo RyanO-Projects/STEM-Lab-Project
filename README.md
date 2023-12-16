@@ -12,6 +12,7 @@ This is a project for hosting a website for the Casper College STEM Learning Cen
 
 ## User Accounts Tutorial:
 
+Much of the account app was derived from this very helpful tutorial from OPENCLASSROOMS.
 - Title: Create a Login Page With a Function-Based View
 - Author: Rafiq Hilali
 - Link: https://openclassrooms.com/en/courses/7107341-intermediate-django/7263317-create-a-login-page-with-a-function-based-view
