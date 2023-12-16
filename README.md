@@ -2,11 +2,13 @@
 
 ## About:
 
+
 This is a project for hosting a website for the Casper College STEM Learning Center. It provides a timetable that shows when tutors are available, and what subjects they tutor. It also allows for signing in and out so that hours can be logged. Although it is specific to Casper College, it can easily be altered for other uses.
 
 ## Features:
 
 - Sign in/ Sign out functionality
+
 - A timetable that displays tutoring availability.
 - A BEAUTIFUL homepage that combines these functions into one place
 
