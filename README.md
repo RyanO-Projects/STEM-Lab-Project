@@ -1,25 +1,26 @@
 # COSC-2418 Final Project
 
-##Installation:
-1. Clone repository or download files through Github
+## Installation:
 
-2. Open terminal, make sure you are in the proper directory, and make migrations:
+    1. Clone repository or download files through Github
 
-'''
-    python manage.py makemigrations
-    python manage.py migrate
-'''
+    2. Open terminal, make sure you are in the proper directory, and make migrations:
 
-    or
+        '''
+            python manage.py makemigrations
+            python manage.py migrate
+        '''
 
-'''
-    python3 manage.py makemigrations
-    python3 manage.py migrate
-'''
+            or
 
-    or 
+        '''
+            python3 manage.py makemigrations
+            python3 manage.py migrate
+        '''
 
-'''
-    py manage.py makemigrations
-    py manage.py migrate
-'''
+            or 
+
+        '''
+            py manage.py makemigrations
+            py manage.py migrate
+        '''
