@@ -2,13 +2,29 @@
 
 ## About:
 
-This is a project for hosting a website for the Casper College STEM Learning Center. It provides a calendar that shows when tutors are available, and what subjects they tutor. It also allows for signing in and out so that hours can be logged. Although it is specific to Casper College, it can easily be altered for other uses.
+
+This is a project for hosting a website for the Casper College STEM Learning Center. It provides a timetable that shows when tutors are available, and what subjects they tutor. It also allows for signing in and out so that hours can be logged. Although it is specific to Casper College, it can easily be altered for other uses.
 
 ## Features:
 
 - Sign in/ Sign out functionality
-- A calendar that displays tutoring hours
-- A homepage that combines these functions into one place
+
+- A timetable that displays tutoring availability.
+- A BEAUTIFUL homepage that combines these functions into one place
+
+## User Accounts Tutorial:
+
+Much of the account app was derived from this very helpful tutorial from OPENCLASSROOMS.
+- Title: Create a Login Page With a Function-Based View
+- Author: Rafiq Hilali
+- Link: https://openclassrooms.com/en/courses/7107341-intermediate-django/7263317-create-a-login-page-with-a-function-based-view
+
+## Notable Mention:
+
+Although Alexandre's tutorial did not end up in the final product, it was very helpful in getting started as well as being very informative of Django's capabilities.
+- Title: Getting started with Django - Building a simple calendar
+- Author: Alexandre Pinto
+- Link: https://alexpnt.github.io/2017/07/15/django-calendar/
 
 ## Installation:
 

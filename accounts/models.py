@@ -2,11 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
-    ROLE_CHOICES = [
-        ("tutor", "tutor"),
-        ("student", "student"),
-    ]
-    role = models.CharField(max_length=20, default="student")
+    pass
+
 
 class LoginLogoutRecord(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE)

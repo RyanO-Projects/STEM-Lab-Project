@@ -34,5 +34,5 @@ def user_logout(request):
         logout(request)
     else:
         return render(request, "logout/error.html")
-    
+
     return render(request, "logout/sign_out.html")
