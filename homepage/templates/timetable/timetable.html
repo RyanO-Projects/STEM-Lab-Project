@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>Timetable</title>
@@ -28,29 +27,9 @@
         .tutoring {
             background-color:honeydew;
         }
-        .navbar {
-            background-color: gray;
-            font-size: 1em;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            color: white;
-            padding: 8px 5px 8px 5px;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-.navbar a {
-    text-decoration: none;
-    color: inherit;
-}
     </style>
 </head>
 <body>
-    <div class ="navbar">
-        <a href="{% url 'accounts:login'%}">Sign in</a>   
-        <a href="{% url 'accounts:logout'%}">Sign out</a>
-    </div>
     <table border="5">
         <thead>
             <tr>
@@ -85,4 +64,4 @@
         </tbody>
     </table>
 </body>
-</html>
+{% endblock content %}

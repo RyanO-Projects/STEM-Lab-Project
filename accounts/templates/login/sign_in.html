@@ -1,10 +1,18 @@
-{% extends "base.html" %}
-{% block content %}
-    <p>{{ message }}</p>
-    <form method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <button type="submit">Submit</button>
-        <p>Click <a href="{% url 'timetable:timesheet'%}">here</a> to return to the homepage.</p>
-    </form>
-{% endblock content %}
+<html>
+    <head>
+        <title>STEM Lab</title>
+    </head>
+    <body>
+        <h1>STEM Lab</h1>
+        <p>{{ message }}</p>
+        <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <button type="submit">Submit</button>
+            <p>Click <a href="{% url 'homepage:homepage'%}">here</a> to return to the homepage.</p>
+        </form>
+        {% if user.is_authenticated %}
+            <p>You are logged in as {{ request.user }}. Click here to <a href="{% url 'accounts:logout' %}">logout</a>.</p>
+        {% endif %}
+    </body>
+</html>

@@ -32,4 +32,7 @@ def user_logout(request):
             logout_record.logout_time = logout_time
             logout_record.save()
         logout(request)
+    else:
+        return render(request, "logout/error.html")
+    
     return render(request, "logout/sign_out.html")

@@ -1,9 +1,67 @@
-<html>
+<html>    
+    <style>
+        body {
+            margin: 0;
+            background-color: lightgrey;
+        }
+
+        h1 {
+            margin-left: 20px;
+            margin-bottom: 0px;
+        }
+
+        p {
+            margin-left: 20px;
+            margin-top: 0px;
+        }
+
+        .top_bar {
+            background-color: #CE0F2D;
+            color: white;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            margin: auto;
+        }
+        
+        .title {
+            display: inline-block;
+        }
+
+        button {
+            background-color: grey;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline;
+            vertical-align: middle;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 24px;
+            margin-left: 50px;
+        }
+    </style>
+
     <body>
-        <p>Home Page</p>
-        <a href="{% url 'accounts:login'%}">Sign in</a><br>
-        <a href="{% url 'accounts:logout'%}">Sign out</a><br>
+        <div class="top_bar">
+            <div class="title">
+                <h1> Casper College </h1> 
+                <p> STEM Learning Center </p>
+            </div>
+                <form action="{% url 'accounts:login'%}">
+                    <div>
+                        <button type="submit">Sign In</button>
+                    </div>
+                </form>
+            
+                <form action="{% url 'accounts:logout'%}">
+                    <div>
+                        <button type="submit">Sign Out</button>
+                    </div>
+                </form>
+        </div>
     </body>
 </html>
-
-{% include 'timetable/timetable.html' %}
+{% include "timetable/timetable.html" %}
