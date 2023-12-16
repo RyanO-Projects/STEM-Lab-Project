@@ -2,7 +2,6 @@
 
 ## About:
 
-
 This is a project for hosting a website for the Casper College STEM Learning Center. It provides a timetable that shows when tutors are available, and what subjects they tutor. It also allows for signing in and out so that hours can be logged. Although it is specific to Casper College, it can easily be altered for other uses.
 
 ## Features:
@@ -64,7 +63,6 @@ Although Alexandre's tutorial did not end up in the final product, it was very h
 
     In your terminal:
 
-                python manage.py makemigrations
                 python manage.py migrate
 
 5. Run server
