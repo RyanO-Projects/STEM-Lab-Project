@@ -8,9 +8,9 @@ This is a project for hosting a website for the Casper College STEM Learning Cen
 ## Features:
 
 - Sign in/ Sign out functionality
-
 - A timetable that displays tutoring availability.
 - A BEAUTIFUL homepage that combines these functions into one place
+- Control timetable data from '/admin' page, add & remove tutors and set their hours.
 
 ## User Accounts Tutorial:
 
